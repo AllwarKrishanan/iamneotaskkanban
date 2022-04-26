@@ -115,15 +115,11 @@ export default class TaskList extends React.PureComponent {
         colors={candidate.column.colors}
         ref={provided.innerRef}
         {...provided.draggableProps}
-        {...provided.dragHandleProps}
-      >
+        {...provided.dragHandleProps}>
         <TopBody>
           <NameContent>
             <Name>{candidate.Name}</Name>{" "}
-            <i
-              style={{ marginLeft: "5px", color: "red", marginTop: "5px" }}
-              className="fa-solid fa-user-group"
-            ></i>
+            <i style={{ marginLeft: "5px", color: "red", marginTop: "5px" }} className="fa-solid fa-user-group"></i>
           </NameContent>
           <Content>
             <ComName>{candidate.Company}</ComName>
@@ -135,8 +131,7 @@ export default class TaskList extends React.PureComponent {
               name="rate1"
               starCount={5}
               value={rating}
-              onStarClick={this.onStarClick.bind(this)}
-            />
+              onStarClick={this.onStarClick.bind(this)}/>
             <Circle> S </Circle>
             <i className="fa fa-ellipsis-v"></i>
           </Footer>

@@ -15,12 +15,9 @@ export const reorderQuoteMap = ({ quoteMap, source, destination }) => {
   if (source.droppableId === destination.droppableId) {
     const reordered = reorder(current, source.index, destination.index);
     const result01 = {
-      ...quoteMap,
-      [source.droppableId]: reordered,
+      ...quoteMap, [source.droppableId]: reordered
     };
-    return {
-      quoteMap: result01,
-    };
+    return { quoteMap: result01 };
   }
   // moving to different list
   // remove from original
